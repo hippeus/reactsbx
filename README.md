@@ -24,11 +24,12 @@ yarn add global typescript ts-node
 javascript general purpose libraries
 
 ```bash
-yarn add axios
+yarn add axios redux
 ```
 
 React.js specific libraries
 
 ```bash
 yarn add global create-react-app
+yarn add react-redux @types/react-redux redux-thunk
 ```
