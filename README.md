@@ -30,6 +30,15 @@ yarn add axios redux
 React.js specific libraries
 
 ```bash
-yarn add global create-react-app
 yarn add react-redux @types/react-redux redux-thunk
 ```
+
+## tools
+
+```bash
+yarn global add <tool>
+```
+
+`create-react-app` - basic react app boilerplate generator
+
+`parcel-bundler` - typescript in the browser
