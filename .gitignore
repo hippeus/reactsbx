@@ -27,6 +27,7 @@ node_modules
 #other
 .tmp
 .sass-cache
+.cache
 
 # security / ssl
 *.pem
