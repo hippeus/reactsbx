@@ -42,3 +42,6 @@ yarn global add <tool>
 `create-react-app` - basic react app boilerplate generator
 
 `parcel-bundler` - typescript in the browser
+
+`json-server` - third party json file based data storage
+
