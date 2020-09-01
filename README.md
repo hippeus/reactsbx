@@ -18,16 +18,24 @@ brew install nvm yarn
 typescript
 
 ```bash
-yarn add global typescript ts-node
+yarn add global typescript ts-nodejs
 ```
 
-javascript general purpose libraries
+## javascript general purpose libraries
 
-```bash
-yarn add axios redux
-```
+`axios` - REST style network request client
 
-React.js specific libraries
+`redux` - in-mem store based state manager
+
+`body-parser @types/body-parser` - http body parser middleware
+
+`cookie-session @types/cookie-session` - http session middleware
+
+`faker.js` - convenience library with fake data sets
+
+`redux-thunk` - redux wrapper for async calls
+
+## React.js specific libraries
 
 ```bash
 yarn add react-redux @types/react-redux redux-thunk
@@ -45,3 +53,6 @@ yarn global add <tool>
 
 `json-server` - third party json file based data storage
 
+`nodemon` - node.js hot reloading
+
+`concurrently` - js jobs parallel runner
