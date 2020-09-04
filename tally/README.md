@@ -1,6 +1,6 @@
 # Tally
 
-Sorting various JS collections with Node.js, abstract classes and interfaces.
+Reporting application build with good engineering practices (composition style).
 
 ## setup
 
