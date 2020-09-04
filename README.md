@@ -25,6 +25,8 @@ Most code is a lose variation or exact copy of Udemy courses made by Stephen Gri
 
 `todoapp` - TS and React.js sample app
 
+`blogpost` - dummy blogpost page used to introduce react function components
+
 ## prerequisites
 
 shell
