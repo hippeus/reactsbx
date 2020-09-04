@@ -7,6 +7,24 @@ Most code is a lose variation or exact copy of Udemy courses made by Stephen Gri
 1. [Modern React with Redux](https://www.udemy.com/course/react-redux)
 2. [Typescript: The Complete Developer's Guide](https://www.udemy.com/course/typescript-the-complete-developers-guide)
 
+## content
+
+### TS centric
+
+`decorator` - TS decorator feature example
+
+`mapsapp` - simple app using googlemaps.js api and faker.js
+
+`sort` - TS app which uses inheritance and abstract classes
+
+`tally` - TS summary app which emphasis composition design
+
+`webfw` - simple web framework.
+
+### React.js centric
+
+`todoapp` - TS and React.js sample app
+
 ## prerequisites
 
 shell
