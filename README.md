@@ -23,9 +23,11 @@ Most code is a lose variation or exact copy of Udemy courses made by Stephen Gri
 
 ### React.js centric
 
-`todoapp` - TS and React.js sample app
+`todoapp` - TS and React.js sample app _(redux, redux-thunk, strong types, application layout)_
 
-`blogpost` - dummy blogpost page used to introduce react function components
+`blogpost` - dummy blogpost page used to introduce react function components _(functional component, faker)_
+
+`seasons` - app displays winter/summer theme based on a user latitude _(conditional rendering, class component, geolocation, icons, TS object indexing, css styling, spinner, default functional props)_
 
 ## prerequisites
 
