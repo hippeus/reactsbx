@@ -29,6 +29,8 @@ Most code is a lose variation or exact copy of Udemy courses made by Stephen Gri
 
 `seasons` - app displays winter/summer theme based on a user latitude _(conditional rendering, class component, geolocation, icons, TS object indexing, css styling, spinner, default functional props)_
 
+`pics` - image searcher _(html form, css inline styling, css grid, event handling, override default DOM event behavior, child->parent via props callback, API calls, map statements, React Refs)_
+
 ## prerequisites
 
 shell
@@ -78,3 +80,7 @@ yarn global add <tool>
 `nodemon` - node.js hot reloading
 
 `concurrently` - js jobs parallel runner
+
+## miscellaneous public APIs
+
+[unsplash](https://unsplash.com/developers) - photo image store
