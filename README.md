@@ -31,6 +31,8 @@ Most code is a lose variation or exact copy of Udemy courses made by Stephen Gri
 
 `pics` - image searcher _(html form, css inline styling, css grid, event handling, override default DOM event behavior, child->parent via props callback, API calls, map statements, React Refs)_
 
+`videos` - youtube video searcher _(search bar, youtube api, iframe, video player, child->parent via props callback, css, semantic-ui grid)_
+
 ## prerequisites
 
 shell
