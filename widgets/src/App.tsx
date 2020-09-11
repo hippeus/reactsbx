@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import Dropdown, { DropdownItem } from "./components/Dropdown";
+import React from "react";
+import Translate from "./components/Translate";
+// import Dropdown, { DropdownItem } from "./components/Dropdown";
 // import Accordion from "./components/Accordion";
 // import WikiSearch from "./components/WikiSearch";
 
@@ -18,36 +19,42 @@ import Dropdown, { DropdownItem } from "./components/Dropdown";
 //   },
 // ];
 
-const dropdownOptions = [
-  { label: "The color RED", value: "red" },
-  { label: "The color BLUE", value: "blue" },
-  { label: "The color YELLOW", value: "yellow" },
-];
+// const dropdownOptions = [
+//   { label: "The color RED", value: "red" },
+//   { label: "The color BLUE", value: "blue" },
+//   { label: "The color YELLOW", value: "yellow" },
+// ];
 
 const App = () => {
   // selected governs the dropdown currently selected value
-  const [selected, setSelected] = useState<DropdownItem>(dropdownOptions[0]);
-  const [showDropdown, setShowDropdown] = useState(true);
+  // const [selected, setSelected] = useState<DropdownItem>(dropdownOptions[0]);
+  // const [showDropdown, setShowDropdown] = useState(true);
 
   return (
     <div>
-      <button
-        onClick={() => {
-          setShowDropdown(!showDropdown);
-        }}
-      >
-        Toggle Dropdown
-      </button>
-      {showDropdown ? (
-        <Dropdown
-          current={selected}
-          onCurrentChange={setSelected}
-          options={dropdownOptions}
-        />
-      ) : null}
-      {/* <Accordion items={items} /> */}
-      {/* <WikiSearch /> */}
+      <Translate />
     </div>
+    /*
+    <div>
+        <button
+          onClick={() => {
+              setShowDropdown(!showDropdown);
+            }}
+          >
+            Toggle Dropdown
+          </button>
+          {showDropdown ? (
+              <Dropdown
+                current={selected}
+                onCurrentChange={setSelected}
+                options={dropdownOptions}
+              />
+            ) : null}
+        { <Accordion items={items} /> }
+        { <WikiSearch /> }
+        <div>
+    </div>
+    */
   );
 };
 

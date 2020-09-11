@@ -4,6 +4,7 @@ interface DropdownProps {
   current: { label: string; value: string };
   onCurrentChange: React.Dispatch<React.SetStateAction<DropdownItem>>;
   options: DropdownItem[];
+  label?: string;
 }
 
 export interface DropdownItem {
@@ -15,6 +16,7 @@ const Dropdown = ({
   options,
   current,
   onCurrentChange,
+  label = "default label",
 }: DropdownProps): JSX.Element => {
   const [open, setOpen] = useState(false);
 
@@ -60,7 +62,7 @@ const Dropdown = ({
   return (
     <div ref={dropDownRef} className='ui form'>
       <div className='field'>
-        <label className='label'>Select a Color</label>
+        <label className='label'>{label}</label>
         <div
           onClick={() => {
             setOpen(!open);
