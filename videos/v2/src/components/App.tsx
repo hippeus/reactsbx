@@ -26,10 +26,6 @@ const App = (): JSX.Element => {
     setSelectedVideo(data.items[0]);
   };
 
-  const onVideoSelected = (item: VideoInfo): void => {
-    setSelectedVideo(item);
-  };
-
   useEffect(() => {
     onTermSubmit("sabaton");
   }, []);
@@ -45,7 +41,7 @@ const App = (): JSX.Element => {
           <div className='five wide column'>
             <VideoList
               items={videos != null ? videos : []}
-              onItemSelected={onVideoSelected}
+              onItemSelected={setSelectedVideo}
             />
           </div>
         </div>
