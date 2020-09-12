@@ -1,5 +1,4 @@
-import React, { ReactNode } from "react";
-import { AxiosResponse } from "axios";
+import React, { useState, useEffect } from "react";
 
 import youtube from "../apis/youtube";
 import SearchBar from "./SearchBar";
@@ -9,16 +8,12 @@ import VideoDetails from "./VideoDetails";
 
 const YoutubePubKey = "AIzaSyDASbbfgFghYuKEIgA4oY2ekB_bKJ-gDQ8";
 
-interface AppState {
-  videos?: Array<any>;
-  selectedVideo: VideoInfo | null;
-}
+const App = (): JSX.Element => {
+  const [videos, setVideos] = useState<Array<any>>([]);
+  const [selectedVideo, setSelectedVideo] = useState<VideoInfo | null>(null);
 
-class App extends React.Component<{}, AppState> {
-  state: AppState = { selectedVideo: null };
-
-  onTermSubmit = async (term: string): Promise<AxiosResponse> => {
-    const resp = await youtube.get("/search", {
+  const onTermSubmit = async (term: string): Promise<void> => {
+    const { data } = await youtube.get("/search", {
       params: {
         q: term,
         part: "snippet",
@@ -27,42 +22,36 @@ class App extends React.Component<{}, AppState> {
         key: YoutubePubKey,
       },
     });
-    console.log(resp.data.items.length);
-    this.setState({
-      videos: resp.data.items,
-      selectedVideo: resp.data.items[0],
-    });
-    return resp;
+    setVideos(data.items);
+    setSelectedVideo(data.items[0]);
   };
 
-  onVideoSelected = (item: VideoInfo): void => {
-    this.setState({ selectedVideo: item });
+  const onVideoSelected = (item: VideoInfo): void => {
+    setSelectedVideo(item);
   };
 
-  componentDidMount = () => {
-    this.onTermSubmit("sabaton");
-  };
+  useEffect(() => {
+    onTermSubmit("sabaton");
+  }, []);
 
-  render(): ReactNode {
-    return (
-      <div className='ui container'>
-        <SearchBar onSubmit={this.onTermSubmit} />
-        <div className='ui grid'>
-          <div className='ui row'>
-            <div className='eleven wide column'>
-              <VideoDetails data={this.state.selectedVideo} />
-            </div>
-            <div className='five wide column'>
-              <VideoList
-                items={this.state.videos != null ? this.state.videos : []}
-                onItemSelected={this.onVideoSelected}
-              />
-            </div>
+  return (
+    <div className='ui container'>
+      <SearchBar onSubmit={onTermSubmit} />
+      <div className='ui grid'>
+        <div className='ui row'>
+          <div className='eleven wide column'>
+            <VideoDetails data={selectedVideo} />
+          </div>
+          <div className='five wide column'>
+            <VideoList
+              items={videos != null ? videos : []}
+              onItemSelected={onVideoSelected}
+            />
           </div>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default App;
