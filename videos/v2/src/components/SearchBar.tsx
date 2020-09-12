@@ -1,42 +1,38 @@
-import React, { ReactNode } from "react";
+import React, { useState } from "react";
 
 interface SearchBarProps {
   onSubmit: (term: string) => void;
 }
 
-class SearchBar extends React.Component<SearchBarProps> {
-  state = {
-    term: "",
-  };
+const SearchBar = ({ onSubmit }: SearchBarProps): JSX.Element => {
+  const [term, setTerm] = useState<string>("");
 
-  onFormSubmit = (e: React.ChangeEvent<HTMLFormElement>): void => {
+  const onFormSubmit = (e: React.ChangeEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
-    this.props.onSubmit(this.state.term);
+    onSubmit(term);
   };
 
-  render(): ReactNode {
-    return (
-      <div className='search-bar ui segment'>
-        <form className='ui form' onSubmit={this.onFormSubmit}>
-          <div className='field'>
-            <label>Video Search</label>
-            <div className='ui icon input focus'>
-              <input
-                type='text'
-                placeholder='YouTube'
-                value={this.state.term}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  this.setState({ term: e.target.value })
-                }
-              />
-              <i className='search icon' />
-            </div>
+  return (
+    <div className='search-bar ui segment'>
+      <form className='ui form' onSubmit={onFormSubmit}>
+        <div className='field'>
+          <label>Video Search</label>
+          <div className='ui icon input focus'>
+            <input
+              type='text'
+              placeholder='YouTube'
+              value={term}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setTerm(e.target.value)
+              }
+            />
+            <i className='search icon' />
           </div>
-        </form>
-      </div>
-    );
-  }
-}
+        </div>
+      </form>
+    </div>
+  );
+};
 
 export default SearchBar;
