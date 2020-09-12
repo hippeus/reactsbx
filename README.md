@@ -33,7 +33,7 @@ Most code is a lose variation or exact copy of Udemy courses made by Stephen Gri
 
 `videos` - youtube video searcher _(search bar, youtube api, iframe, video player, child->parent via props callback, css, semantic-ui grid)_
 
-`videos/v2` - youtube video searcher refactored to functional components only _(search bar, youtube api, iframe, video player, child->parent via props callback, css, semantic-ui grid)_
+`videos/v2` - youtube video searcher refactored to functional components and custom React Hooks _(custom hook,search bar, youtube api, iframe, video player, child->parent via props callback, css, semantic-ui grid)_
 
 `widgets` - various widgets using React hooks system _(React primitive and custom made hooks, useEffect cleanup, useRef, manual event listener(event bubbling), wikipedia api, google translate api, React.Fragment, timeout, **dangerouslySetInnerHTML**, custom navigation bar, active search, api throttle, dropdown list, css accordion)_
 
