@@ -1,0 +1,10 @@
+.video-item {
+  display: flex !important;
+  align-items: center !important;
+  /* enable cursor/pointer support to show item is clickable*/
+  cursor: pointer;
+}
+
+.video-item.item img {
+  max-width: 180px;
+}
