@@ -37,6 +37,10 @@ Most code is a lose variation or exact copy of Udemy courses made by Stephen Gri
 
 `widgets` - various widgets using React hooks system _(React primitive and custom made hooks, useEffect cleanup, useRef, manual event listener(event bubbling), wikipedia api, google translate api, React.Fragment, timeout, **dangerouslySetInnerHTML**, custom navigation bar, active search, api throttle, dropdown list, css accordion)_
 
+`songs` - primitive react app with redux _(redux with class Component and function Component)_
+
+TODO: continue from section 18 Async Actions with Redux Thunk
+
 ## prerequisites
 
 shell
